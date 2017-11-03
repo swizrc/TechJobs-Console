@@ -117,15 +117,15 @@ namespace TechJobsConsole
             return choiceKeys[choiceIdx];
         }
 
-        public static StringBuilder Elongate(StringBuilder myString)
+        public static StringBuilder Elongate(StringBuilder myString,int Length)
         {
-            if (myString.Length == 15)
+            if (myString.Length == Length)
             {
                 return myString;
             }
             else
             {
-                return Elongate(myString.Append(" "));
+                return Elongate(myString.Append(" "),Length);
             }
         } 
 
@@ -141,7 +141,7 @@ namespace TechJobsConsole
                         //maxlen = 15
                         StringBuilder keyBuilder = new StringBuilder();
                         keyBuilder.Append(key);
-                        keyBuilder = Elongate(keyBuilder);
+                        keyBuilder = Elongate(keyBuilder,15);
                         Console.WriteLine(keyBuilder + " : " + job[key]);
                     }
                     Console.WriteLine("\n");
