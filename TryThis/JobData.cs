@@ -68,7 +68,7 @@ namespace TechJobsConsole
             {
                 foreach (string key in job.Keys)
                 {
-                    if (job[key].ToUpper() == searchTerm.ToUpper())
+                    if (job[key].ToUpper().Contains(searchTerm.ToUpper()))
                     {
                         jobs.Add(job);
                     }
